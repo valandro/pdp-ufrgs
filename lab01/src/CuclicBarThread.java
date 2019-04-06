@@ -4,26 +4,25 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class CuclicBarThread implements Runnable {
     private CyclicBarrier barrier;
     private int[][] matrix;
-    private AtomicInteger det;
+    private AtomicInteger sum;
     private int threadNumber;
+    private final static int MATRIX_HEIGHT = 3;
 
-    public CuclicBarThread(CyclicBarrier var1, int[][] matrix, Integer threadNumber, AtomicInteger det) {
+    CuclicBarThread(CyclicBarrier var1, int[][] matrix, Integer threadNumber, AtomicInteger sum) {
         this.barrier = var1;
         this.matrix = matrix;
         this.threadNumber = threadNumber;
-        this.det = det;
+        this.sum = sum;
     }
 
 
     public void run() {
         try {
-            if(threadNumber == 1){
-                det.getAndAdd(matrix[0][0] * matrix[1][1]);
-            } else {
-                det.getAndAdd(- matrix[0][1] * matrix[1][0]);
+            for (int el = 0; el < MATRIX_HEIGHT; el++) {
+                this.sum.getAndAdd(matrix[threadNumber - 1][el]);
             }
 
-            System.out.println(Thread.currentThread().getName() + " :: Barreira 1: Esperando o primeiro estágio ser completado");
+            System.out.println(Thread.currentThread().getName() + " :: Barreira 1: Soma de todos elementos da coluna!!");
             barrier.await();
 
         } catch (Exception var2) {
