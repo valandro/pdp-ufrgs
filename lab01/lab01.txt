@@ -1,0 +1,8 @@
+Exercício 1)
+Responda as seuintes questões:
+
+- Quantos estágios o código possui?
+
+- Quantas vezes o estágio é utilizado para cada thread?
+
+- Quantas barreiras são necessárias nesse exemplo? (explique)
