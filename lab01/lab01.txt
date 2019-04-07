@@ -3,6 +3,12 @@ Responda as seuintes questões:
 
 - Quantos estágios o código possui?
 
+R: O código possui três estágios.
+
 - Quantas vezes o estágio é utilizado para cada thread?
 
+R: O estágio é utilizado três vezes para cada thread.
+
 - Quantas barreiras são necessárias nesse exemplo? (explique)
+
+R: Neste exemplo, são necessárias três barreiras, visto que o para cada thread, temos três estágios de sleep (que poderiam ser outras funções), e elas poderiam trocar mensagens ou até sincronizar seus estados nesses diferentes estágios. Portanto, três barreiras.
