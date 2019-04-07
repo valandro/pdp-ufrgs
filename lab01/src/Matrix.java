@@ -1,3 +1,5 @@
+package ap1;
+
 class Matrix {
     private int size;
 
@@ -6,18 +8,27 @@ class Matrix {
     }
 
     int[][] getMatrix() {
-        switch (this.size) {
-            case 3: {
-                return new int[][] { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+        //Creating square matrix
+        int[][] matrix = new int[size][size];
+
+        //Populate the matrix
+        for(int i = 0; i < matrix.length; i++){
+          for (int j = 0; j < matrix[i].length; j++) {
+                matrix[i][j] = i + j;
             }
-            case 5: {
-                return new int[][]{ {1, 2, 3}, {4, 5, 6}, {7, 8, 9}, {10, 11, 12}, {13, 14, 15} };
-            }
-            case 7: {
-                return new int[][] { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} , {10, 11, 12}, {13, 14, 15}, {16, 17, 18}, {19, 20, 21} };
-            }
-            default:
-                return new int[][] { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
         }
+
+        //Print the matrix
+        for (int[] x : matrix){
+           for (int y : x)
+           {
+                System.out.print(y + " ");
+           }
+           System.out.println();
+        }
+
+
+
+        return matrix;
     }
 }

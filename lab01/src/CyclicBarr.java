@@ -1,3 +1,4 @@
+package ap1;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -6,7 +7,7 @@ public class CyclicBarr {
     }
 
     public static void main(String[] var0) {
-        int numberThreads = 5;
+        int numberThreads = 7;
         int[][] matrix = new Matrix(numberThreads).getMatrix();
         AtomicInteger sum = new AtomicInteger(0);
 
