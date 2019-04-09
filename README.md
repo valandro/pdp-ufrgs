@@ -7,6 +7,10 @@ Repository to centralize laboratories and exercises from Distributed Parallel Pr
 - Java Threads
 - Barrier Synchronization
 
+## EX 01
+- Java Threads
+- Latch Synchronization
+
 ### Collaborators
 - Lucas Valandro *(@valandro)*
 - Lucas Tansini *(@lucastansini)*

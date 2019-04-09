@@ -15,7 +15,6 @@ public class CuclicBarThread implements Runnable {
         this.sum = sum;
     }
 
-
     public void run() {
         try {
             for (int el = 0; el < MATRIX_HEIGHT; el++) {
