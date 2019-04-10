@@ -1,6 +1,5 @@
-package exemplos;
-import exemplos.*;
-import java.util.concurrent.BrokenBarrierException;
+package basecode;
+
 import java.util.concurrent.CyclicBarrier;
 
 public class CyclicBarr {

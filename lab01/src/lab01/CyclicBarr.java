@@ -1,4 +1,4 @@
-package ap1;
+package lab01;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.atomic.AtomicInteger;
 

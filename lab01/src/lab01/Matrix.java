@@ -1,4 +1,4 @@
-package ap1;
+package lab01;
 
 class Matrix {
     private int size;
