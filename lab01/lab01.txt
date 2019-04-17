@@ -1,3 +1,5 @@
+Lucas Valandro e Lucas Tansini
+
 Exercício 1)
 Responda as seuintes questões:
 
@@ -12,3 +14,12 @@ R: O estágio é utilizado três vezes para cada thread.
 - Quantas barreiras são necessárias nesse exemplo? (explique)
 
 R: Neste exemplo, são necessárias três barreiras, visto que o para cada thread, temos três estágios de sleep (que poderiam ser outras funções), e elas poderiam trocar mensagens ou até sincronizar seus estados nesses diferentes estágios. Portanto, três barreiras.
+
+Exercício 2)
+
+Foi adicionado "barrier.await();" após cada System.out de barreira na classe CuclicBarThread.
+
+Exercício 3)
+
+Algoritmo que utiliza N threads e 1 barreira para somar todos elementos de uma matriz, tendo cada thread a responsabilidade
+de somar 1 coluna da matriz N x N.
