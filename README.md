@@ -11,6 +11,9 @@ Repository to centralize laboratories and exercises from Distributed Parallel Pr
 - Java Threads
 - Latch Synchronization
 
+## EX 03
+- OpenMP
+
 ### Collaborators
 - Lucas Valandro *(@valandro)*
 - Lucas Tansini *(@lucastansini)*
