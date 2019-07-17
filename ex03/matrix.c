@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <omp.h>
-#define MAX_THREADS 4
+#define MAX_THREADS 3
 
 void mm_omp(double *A, double *B, double *C, int n) 
 {	
@@ -11,6 +11,7 @@ void mm_omp(double *A, double *B, double *C, int n)
 		for (i = 0; i < n; i++) { 
 			for (j = 0; j < n; j++) {
 				double dot  = 0;
+				#pragma omp parallel for reduction(+:dot) private(k)
 				for (k = 0; k < n; k++) {
 					dot += A[i*n+k]*B[k*n+j];
 				} 
@@ -25,7 +26,7 @@ int main() {
 	int i, n;
 	double *A, *B, *C, dtime;
 
-	n = 1000;
+	n = 750;
 	A = (double*)malloc(sizeof(double)*n*n);
 	B = (double*)malloc(sizeof(double)*n*n);
 	C = (double*)malloc(sizeof(double)*n*n);
